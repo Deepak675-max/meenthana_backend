@@ -2,9 +2,9 @@ const sequelize = require("../../helper/common/init_postgres")
 
 const DataTypes = require("sequelize");
 
-const UserPersonalInfoModel = require('../user/user_personal_info.model');
+const MerchantPersonalInfoModel = require('./personal_info.model');
 
-const UserBusinessInfoModel = sequelize.define('UserBusinessInfo', {
+const MerchantBusinessInfoModel = sequelize.define('MerchantBusinessInfo', {
     // Model attributes are defined here
     businessName: {
         type: DataTypes.STRING,
@@ -16,6 +16,10 @@ const UserBusinessInfoModel = sequelize.define('UserBusinessInfo', {
     },
     vatNumber: {
         type: DataTypes.STRING,
+        allowNull: false
+    },
+    dateOfCreation: {
+        type: DataTypes.DATE,
         allowNull: false
     },
     fieldOfActivity: {
@@ -39,10 +43,10 @@ const UserBusinessInfoModel = sequelize.define('UserBusinessInfo', {
     timestamps: true
 });
 
-UserBusinessInfoModel.belongsTo(UserPersonalInfoModel, { foreignKey: 'userId' });
+MerchantBusinessInfoModel.belongsTo(MerchantPersonalInfoModel, { foreignKey: 'merchantId' });
 
-UserBusinessInfoModel.sync().catch(error => {
+MerchantBusinessInfoModel.sync().catch(error => {
     console.log(error);
 })
 
-module.exports = UserBusinessInfoModel;
+module.exports = MerchantBusinessInfoModel;

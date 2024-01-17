@@ -1,0 +1,288 @@
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-16 16:17:38'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'jwt malformed',
+  timestamp: '2024-01-16 16:17:57'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'jwt malformed',
+  timestamp: '2024-01-16 16:18:00'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'jwt malformed',
+  timestamp: '2024-01-16 16:19:45'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'jwt malformed',
+  timestamp: '2024-01-16 16:20:09'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'jwt malformed',
+  timestamp: '2024-01-16 16:21:36'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'jwt malformed',
+  timestamp: '2024-01-16 16:24:21'
+}
+{
+  name: 'SequelizeForeignKeyConstraintError',
+  parent: error: insert or update on table "UserBusinessInfos" violates foreign key constraint "UserBusinessInfos_userId_fkey1"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 305,
+    severity: 'ERROR',
+    code: '23503',
+    detail: 'Key (userId)=(4) is not present in table "MerchantPersonalInfos".',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'UserBusinessInfos',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'UserBusinessInfos_userId_fkey1',
+    file: 'ri_triggers.c',
+    line: '2619',
+    routine: 'ri_ReportViolation',
+    sql: 'ALTER TABLE "UserBusinessInfos"  ADD FOREIGN KEY ("userId") REFERENCES "MerchantPersonalInfos" ("id") ON DELETE SET NULL ON UPDATE CASCADE;',
+    parameters: undefined
+  },
+  original: error: insert or update on table "UserBusinessInfos" violates foreign key constraint "UserBusinessInfos_userId_fkey1"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 305,
+    severity: 'ERROR',
+    code: '23503',
+    detail: 'Key (userId)=(4) is not present in table "MerchantPersonalInfos".',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'UserBusinessInfos',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'UserBusinessInfos_userId_fkey1',
+    file: 'ri_triggers.c',
+    line: '2619',
+    routine: 'ri_ReportViolation',
+    sql: 'ALTER TABLE "UserBusinessInfos"  ADD FOREIGN KEY ("userId") REFERENCES "MerchantPersonalInfos" ("id") ON DELETE SET NULL ON UPDATE CASCADE;',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "UserBusinessInfos"  ADD FOREIGN KEY ("userId") REFERENCES "MerchantPersonalInfos" ("id") ON DELETE SET NULL ON UPDATE CASCADE;',
+  parameters: {},
+  table: 'UserBusinessInfos',
+  fields: null,
+  value: undefined,
+  index: 'UserBusinessInfos_userId_fkey1',
+  reltype: undefined,
+  level: 'error',
+  timestamp: '2024-01-16 18:35:47'
+}
+{
+  name: 'SequelizeForeignKeyConstraintError',
+  parent: error: insert or update on table "UserBusinessInfos" violates foreign key constraint "UserBusinessInfos_userId_fkey1"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 305,
+    severity: 'ERROR',
+    code: '23503',
+    detail: 'Key (userId)=(4) is not present in table "MerchantPersonalInfos".',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'UserBusinessInfos',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'UserBusinessInfos_userId_fkey1',
+    file: 'ri_triggers.c',
+    line: '2619',
+    routine: 'ri_ReportViolation',
+    sql: 'ALTER TABLE "UserBusinessInfos"  ADD FOREIGN KEY ("userId") REFERENCES "MerchantPersonalInfos" ("id") ON DELETE SET NULL ON UPDATE CASCADE;',
+    parameters: undefined
+  },
+  original: error: insert or update on table "UserBusinessInfos" violates foreign key constraint "UserBusinessInfos_userId_fkey1"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 305,
+    severity: 'ERROR',
+    code: '23503',
+    detail: 'Key (userId)=(4) is not present in table "MerchantPersonalInfos".',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'UserBusinessInfos',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'UserBusinessInfos_userId_fkey1',
+    file: 'ri_triggers.c',
+    line: '2619',
+    routine: 'ri_ReportViolation',
+    sql: 'ALTER TABLE "UserBusinessInfos"  ADD FOREIGN KEY ("userId") REFERENCES "MerchantPersonalInfos" ("id") ON DELETE SET NULL ON UPDATE CASCADE;',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "UserBusinessInfos"  ADD FOREIGN KEY ("userId") REFERENCES "MerchantPersonalInfos" ("id") ON DELETE SET NULL ON UPDATE CASCADE;',
+  parameters: {},
+  table: 'UserBusinessInfos',
+  fields: null,
+  value: undefined,
+  index: 'UserBusinessInfos_userId_fkey1',
+  reltype: undefined,
+  level: 'error',
+  timestamp: '2024-01-16 18:36:02'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: column "dateOfBirth" of relation "UserPersonalInfos" contains null values
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 176,
+    severity: 'ERROR',
+    code: '23502',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'UserPersonalInfos',
+    column: 'dateOfBirth',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '6051',
+    routine: 'ATRewriteTable',
+    sql: 'ALTER TABLE "public"."UserPersonalInfos" ADD COLUMN "dateOfBirth" TIMESTAMP WITH TIME ZONE NOT NULL;',
+    parameters: undefined
+  },
+  original: error: column "dateOfBirth" of relation "UserPersonalInfos" contains null values
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 176,
+    severity: 'ERROR',
+    code: '23502',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'UserPersonalInfos',
+    column: 'dateOfBirth',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '6051',
+    routine: 'ATRewriteTable',
+    sql: 'ALTER TABLE "public"."UserPersonalInfos" ADD COLUMN "dateOfBirth" TIMESTAMP WITH TIME ZONE NOT NULL;',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "public"."UserPersonalInfos" ADD COLUMN "dateOfBirth" TIMESTAMP WITH TIME ZONE NOT NULL;',
+  parameters: {},
+  level: 'error',
+  timestamp: '2024-01-16 18:36:38'
+}
+{
+  status: '422',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: '"firstName" must be a string',
+  timestamp: '2024-01-16 18:47:16'
+}
+{
+  status: '422',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: '"businessName" is required',
+  timestamp: '2024-01-16 18:47:40'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'validateAsync')",
+  timestamp: '2024-01-16 19:30:58'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'email')",
+  timestamp: '2024-01-16 19:31:37'
+}

@@ -1,18 +1,31 @@
 const joi = require('joi');
 
-const signupUserSchema = joi.object({
+const merchantRegistrationDetailsSchema = joi.object({
     firstName: joi.string().trim().required(),
     lastName: joi.string().trim().required(),
     email: joi.string().trim().email().required(),
-    phoneNumber: joi.string().trim().required(),
-    password: joi.string().trim().required(),
+    phoneNumber: joi.string().length(10).trim().required(),
+    dateOfCreation: joi.date().required(),
+    termAndCondition: joi.boolean().allow(null).default(false),
     businessName: joi.string().trim().required(),
     businessAddress: joi.string().trim().required(),
-    vatNumber: joi.string().trim().required(),
+    vatNumber: joi.number().required(),
     fieldOfActivity: joi.string().trim().required(),
     siretNumber: joi.number().required(),
-    businessDescription: joi.string().trim().required()
-})
+    businessDescription: joi.string().trim().required(),
+});
+
+
+const ClientRegistrationDetailsSchema = joi.object({
+    firstName: joi.string().trim().required(),
+    lastName: joi.string().trim().required(),
+    email: joi.string().trim().email().required(),
+    phoneNumber: joi.string().length(10).trim().required(),
+    password: joi.string().trim().required(),
+    dateOfBirth: joi.date().required(),
+    gender: joi.string().trim().required(),
+    termAndCondition: joi.boolean().allow(null).default(false),
+});
 
 const loginUserSchema = joi.object({
     email: joi.string().trim().email().required(),
@@ -20,7 +33,8 @@ const loginUserSchema = joi.object({
 })
 
 module.exports = {
-    signupUserSchema,
+    merchantRegistrationDetailsSchema,
+    ClientRegistrationDetailsSchema,
     loginUserSchema
 }
 

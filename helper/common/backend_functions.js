@@ -1,30 +1,37 @@
-const Chat = require('../../models/chat.model');
-const User = require('../../models/user/user_personal_info.model');
+const AppRouteModel = require("../../models/app_route/app_routes.model");
+const httpErrors = require("http-errors");
+const { logger } = require("./winston");
 
-const getChatUsers = async (chatId) => {
+
+const addRoutesIntoDatabase = async (routes) => {
     try {
-        const chat = (await Chat.findOne({
-            where: {
-                id: chatId
-            },
-            attributes: {
-                exclude: ['createdAt', 'updatedAt'],
-            },
-            include: [{
-                model: User,
-                attributes: {
-                    exclude: ['phoneNumber', 'password', 'createdAt', 'updatedAt'],
-                },
-                through: { attributes: [] }, // Exclude the join table attributes from the result
-            }],
+        await Promise.all(
+            routes.map(async (route) => {
+                route.methods.map(async (method) => {
+                    const appRoute = await AppRouteModel.findOne({
+                        where: {
+                            path: route.path,
+                            method: method,
+                            isDeleted: false
+                        }
+                    });
 
-        })).get();
-        return chat.Users;
+                    if (!appRoute)
+                        await AppRouteModel.create({
+                            path: route.path,
+                            method: method
+                        });
+                })
+                return;
+            })
+        )
     } catch (error) {
-        throw error;
+        console.log(error);
+        logger.error(error.message, { status: "500", path: __filename });
+        throw (error);
     }
 }
 
 module.exports = {
-    getChatUsers
+    addRoutesIntoDatabase
 }

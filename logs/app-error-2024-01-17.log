@@ -1,0 +1,943 @@
+{
+  status: '422',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: '"password" is required',
+  timestamp: '2024-01-17 11:55:49'
+}
+{
+  status: '422',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: '"vatNumber" must be a string',
+  timestamp: '2024-01-17 11:56:23'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'string violation: dateOfCreation cannot be an array or an object',
+  timestamp: '2024-01-17 11:56:45'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'string violation: dateOfCreation cannot be an array or an object',
+  timestamp: '2024-01-17 11:59:04'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: column "dateOfCreation" cannot be cast automatically to type timestamp with time zone
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 235,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "dateOfCreation"::timestamp with time zone".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+    parameters: undefined
+  },
+  original: error: column "dateOfCreation" cannot be cast automatically to type timestamp with time zone
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 235,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "dateOfCreation"::timestamp with time zone".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+  parameters: {},
+  level: 'error',
+  timestamp: '2024-01-17 11:59:36'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: column "dateOfCreation" cannot be cast automatically to type timestamp with time zone
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 235,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "dateOfCreation"::timestamp with time zone".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+    parameters: undefined
+  },
+  original: error: column "dateOfCreation" cannot be cast automatically to type timestamp with time zone
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 235,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "dateOfCreation"::timestamp with time zone".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+  parameters: {},
+  level: 'error',
+  timestamp: '2024-01-17 11:59:36'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: column "dateOfCreation" cannot be cast automatically to type timestamp with time zone
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 235,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "dateOfCreation"::timestamp with time zone".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+    parameters: undefined
+  },
+  original: error: column "dateOfCreation" cannot be cast automatically to type timestamp with time zone
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 235,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "dateOfCreation"::timestamp with time zone".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" SET NOT NULL;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" DROP DEFAULT;ALTER TABLE "UserBusinessInfos" ALTER COLUMN "dateOfCreation" TYPE TIMESTAMP WITH TIME ZONE;',
+  parameters: {},
+  level: 'error',
+  timestamp: '2024-01-17 11:59:46'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'validateAsync')",
+  timestamp: '2024-01-17 12:40:52'
+}
+{
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'relname must be unique',
+      type: 'unique violation',
+      path: 'relname',
+      value: 'MerchantPersonalInfos_id_seq',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'relnamespace must be unique',
+      type: 'unique violation',
+      path: 'relnamespace',
+      value: '2200',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 271,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(MerchantPersonalInfos_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "MerchantPersonalInfos" ("id"   SERIAL , "firstName" VARCHAR(255) NOT NULL, "lastName" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL, "phoneNumber" VARCHAR(255) NOT NULL, "termAndCondition" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  original: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 271,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(MerchantPersonalInfos_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "MerchantPersonalInfos" ("id"   SERIAL , "firstName" VARCHAR(255) NOT NULL, "lastName" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL, "phoneNumber" VARCHAR(255) NOT NULL, "termAndCondition" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  fields: { relname: 'MerchantPersonalInfos_id_seq', relnamespace: '2200' },
+  sql: 'CREATE TABLE IF NOT EXISTS "MerchantPersonalInfos" ("id"   SERIAL , "firstName" VARCHAR(255) NOT NULL, "lastName" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL, "phoneNumber" VARCHAR(255) NOT NULL, "termAndCondition" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+  level: 'error',
+  timestamp: '2024-01-17 12:46:40'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'doesUserExist is not defined',
+  timestamp: '2024-01-17 12:59:58'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'doesUserExist is not defined',
+  timestamp: '2024-01-17 13:02:07'
+}
+{
+  status: '401',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'invalid credentials',
+  timestamp: '2024-01-17 13:04:57'
+}
+{
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'relname must be unique',
+      type: 'unique violation',
+      path: 'relname',
+      value: 'AccessGroups_id_seq',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'relnamespace must be unique',
+      type: 'unique violation',
+      path: 'relnamespace',
+      value: '2200',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 262,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(AccessGroups_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  original: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 262,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(AccessGroups_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  fields: { relname: 'AccessGroups_id_seq', relnamespace: '2200' },
+  sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+  level: 'error',
+  timestamp: '2024-01-17 13:37:27'
+}
+{
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'relname must be unique',
+      type: 'unique violation',
+      path: 'relname',
+      value: 'AccessGroups_id_seq',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'relnamespace must be unique',
+      type: 'unique violation',
+      path: 'relnamespace',
+      value: '2200',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 262,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(AccessGroups_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  original: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 262,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(AccessGroups_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  fields: { relname: 'AccessGroups_id_seq', relnamespace: '2200' },
+  sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+  level: 'error',
+  timestamp: '2024-01-17 13:39:28'
+}
+{
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'relname must be unique',
+      type: 'unique violation',
+      path: 'relname',
+      value: 'MerchantPersonalInfos_id_seq',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'relnamespace must be unique',
+      type: 'unique violation',
+      path: 'relnamespace',
+      value: '2200',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 271,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(MerchantPersonalInfos_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "MerchantPersonalInfos" ("id"   SERIAL , "firstName" VARCHAR(255) NOT NULL, "lastName" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL, "phoneNumber" VARCHAR(255) NOT NULL, "termAndCondition" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  original: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 271,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(MerchantPersonalInfos_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "MerchantPersonalInfos" ("id"   SERIAL , "firstName" VARCHAR(255) NOT NULL, "lastName" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL, "phoneNumber" VARCHAR(255) NOT NULL, "termAndCondition" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  fields: { relname: 'MerchantPersonalInfos_id_seq', relnamespace: '2200' },
+  sql: 'CREATE TABLE IF NOT EXISTS "MerchantPersonalInfos" ("id"   SERIAL , "firstName" VARCHAR(255) NOT NULL, "lastName" VARCHAR(255) NOT NULL, "email" VARCHAR(255) NOT NULL, "phoneNumber" VARCHAR(255) NOT NULL, "termAndCondition" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+  level: 'error',
+  timestamp: '2024-01-17 13:55:49'
+}
+{
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'relname must be unique',
+      type: 'unique violation',
+      path: 'relname',
+      value: 'AccessGroups_id_seq',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'relnamespace must be unique',
+      type: 'unique violation',
+      path: 'relnamespace',
+      value: '2200',
+      origin: 'DB',
+      instance: null,
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 262,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(AccessGroups_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  original: error: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 262,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (relname, relnamespace)=(AccessGroups_id_seq, 2200) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'pg_catalog',
+    table: 'pg_class',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'pg_class_relname_nsp_index',
+    file: 'nbtinsert.c',
+    line: '673',
+    routine: '_bt_check_unique',
+    sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+    parameters: undefined
+  },
+  fields: { relname: 'AccessGroups_id_seq', relnamespace: '2200' },
+  sql: 'CREATE TABLE IF NOT EXISTS "AccessGroups" ("id"   SERIAL , "name" VARCHAR(255) NOT NULL, "isAdminGroup" BOOLEAN DEFAULT false, "isDeleted" BOOLEAN DEFAULT false, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));',
+  level: 'error',
+  timestamp: '2024-01-17 15:26:08'
+}
+{
+  status: '409',
+  path: '\\controllers\\permission\\access_group.controller.js',
+  level: 'error',
+  message: 'Access Group with name: admin already exist',
+  timestamp: '2024-01-17 15:38:57'
+}
+{
+  status: undefined,
+  path: '\\controllers\\permission\\access_group.controller.js',
+  level: 'error',
+  message: 'column "nan" does not exist',
+  timestamp: '2024-01-17 16:11:56'
+}
+{
+  name: 'SequelizeUnknownConstraintError',
+  parent: error: constraint "MerchantPersonalInfos_accessGroupId_fkey" of relation "MerchantPersonalInfos" does not exist
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 174,
+    severity: 'ERROR',
+    code: '42704',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12056',
+    routine: 'ATExecDropConstraint',
+    sql: 'ALTER TABLE "MerchantPersonalInfos" DROP CONSTRAINT "MerchantPersonalInfos_accessGroupId_fkey"',
+    parameters: undefined
+  },
+  original: error: constraint "MerchantPersonalInfos_accessGroupId_fkey" of relation "MerchantPersonalInfos" does not exist
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 174,
+    severity: 'ERROR',
+    code: '42704',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12056',
+    routine: 'ATExecDropConstraint',
+    sql: 'ALTER TABLE "MerchantPersonalInfos" DROP CONSTRAINT "MerchantPersonalInfos_accessGroupId_fkey"',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "MerchantPersonalInfos" DROP CONSTRAINT "MerchantPersonalInfos_accessGroupId_fkey"',
+  parameters: {},
+  constraint: 'MerchantPersonalInfos_accessGroupId_fkey',
+  fields: undefined,
+  table: 'MerchantPersonalInfos',
+  level: 'error',
+  timestamp: '2024-01-17 18:43:17'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 18:57:42'
+}
+{
+  status: '401',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'invalid credentials',
+  timestamp: '2024-01-17 18:58:03'
+}
+{
+  status: '401',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'invalid credentials',
+  timestamp: '2024-01-17 18:58:05'
+}
+{
+  status: '401',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'invalid credentials',
+  timestamp: '2024-01-17 18:58:12'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 18:59:12'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 18:59:48'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:01:57'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:03:28'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:04:22'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:06:37'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:06:55'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'UserPersonalInfoModel is not defined',
+  timestamp: '2024-01-17 19:07:12'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:11:16'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:12:18'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:14:31'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:15:05'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:17:18'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:22:43'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:22:44'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:23:43'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-17 19:37:13'
+}
