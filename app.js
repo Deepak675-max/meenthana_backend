@@ -51,8 +51,39 @@ maanthenaBackendApp.use((error, req, res, next) => {
 
 const port = process.env.APP_PORT;
 
+const AccessGroupModel = require("./models/access_gorup/access_group.model");
+const AppRoutesModel = require("./models/app_route/app_routes.model");
+const ClientPersonalInfoModel = require("./models/client/personal_info.model");
+const MerchantPersonalInfoModel = require("./models/merchant/personal_info.model");
+const MerchantBusinessInfoModel = require("./models/merchant/business_info.model");
+const ForgotPasswordRequests = require("./models/forgetPasswordRequests.model");
+const PermissionModel = require("./models/permision/permission.model");
 
+//model associations.
+//many-to-many association between AppRoutesModel and AccessGroupModel. 
+AppRoutesModel.belongsToMany(AccessGroupModel, { through: PermissionModel, foreignKey: 'appRouteId' });
+AccessGroupModel.belongsToMany(AppRoutesModel, { through: PermissionModel, foreignKey: 'accessGroupId' });
+PermissionModel.belongsTo(AppRoutesModel, { foreignKey: 'appRouteId' });
+PermissionModel.belongsTo(AccessGroupModel, { foreignKey: 'accessGroupId' });
 
+//one-to-many association between ClientPersonalInfoModel and AccessGroupModel.
+AccessGroupModel.hasMany(ClientPersonalInfoModel, { foreignKey: "accessGroupId" });
+ClientPersonalInfoModel.belongsTo(AccessGroupModel, { foreignKey: "accessGroupId" });
+
+//one-to-many association between MerchantPersonalInfoModel and AccessGroupModel.
+AccessGroupModel.hasMany(MerchantPersonalInfoModel, { foreignKey: 'accessGroupId' });
+MerchantPersonalInfoModel.belongsTo(AccessGroupModel, { foreignKey: "accessGroupId" });
+
+//one-to-many association between ForgotPasswordRequests and ClientPersonalInfoModel.
+ClientPersonalInfoModel.hasMany(ForgotPasswordRequests, { foreignKey: 'userId' });
+ForgotPasswordRequests.belongsTo(ClientPersonalInfoModel, { foreignKey: 'userId' });
+
+//one-to-one association between MerchantPersonalInfoModel and MerchantBusinessInfoModel.
+MerchantBusinessInfoModel.belongsTo(MerchantPersonalInfoModel, { foreignKey: 'merchantId' });
+
+//one-to-many association between ForgotPasswordRequests and MerchantPersonalInfoModel.
+MerchantPersonalInfoModel.hasMany(ForgotPasswordRequests, { foreignKey: 'userId' });
+ForgotPasswordRequests.belongsTo(MerchantPersonalInfoModel, { foreignKey: 'userId' });
 
 sequelize.sync({ alter: true })
     .then(async () => {

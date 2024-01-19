@@ -2,7 +2,6 @@ const AppRouteModel = require("../../models/app_route/app_routes.model");
 const httpErrors = require("http-errors");
 const { logger } = require("./winston");
 
-
 const addRoutesIntoDatabase = async (routes) => {
     try {
         await Promise.all(

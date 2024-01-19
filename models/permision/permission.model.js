@@ -2,11 +2,13 @@ const sequelize = require("../../helper/common/init_postgres")
 
 const DataTypes = require("sequelize");
 
-const AccessGroupModel = require('../access_gorup/access_group.model');
-const AppRoutesModel = require('../app_route/app_routes.model');
-
-const permissionModel = sequelize.define('Permission', {
+const PermissionModel = sequelize.define('Permission', {
     // Model attributes are defined here
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
     isDeleted: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
@@ -15,11 +17,8 @@ const permissionModel = sequelize.define('Permission', {
     timestamps: true
 });
 
-AppRoutesModel.belongsToMany(AccessGroupModel, { through: "Permissions" })
-AccessGroupModel.belongsToMany(AppRoutesModel, { through: "Permissions" })
-
-permissionModel.sync().catch(error => {
+PermissionModel.sync().catch(error => {
     console.log(error);
 })
 
-module.exports = permissionModel;
+module.exports = PermissionModel;

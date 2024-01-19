@@ -9,20 +9,25 @@ const { logger } = require("../helper/common/winston");
 const signAccessToken = (payloadData) => {
     return new Promise(async (resolve, reject) => {
         try {
-            console.log("payload = ", payloadData);
             const jwtAccessToken = JWT.sign(
                 {
                     userId: payloadData.userId,
+                    firstName: payloadData.firstName,
+                    lastName: payloadData.lastName,
                     email: payloadData.email,
+                    userType: payloadData.type
                 },
                 process.env.JWT_ACCESS_TOKEN_SECRET_KEY
             );
-            console.log(jwtAccessToken);
+
             const expirationTimeInSeconds = 1 * 24 * 60 * 60;
+
             const accessTokenKey = `access_token:${payloadData.userId}`;
+
             await redisClient.SET(accessTokenKey, jwtAccessToken, {
                 EX: expirationTimeInSeconds,
-            })
+            });
+
             resolve(jwtAccessToken);
         } catch (error) {
             logger.error(error.message, { status: 500, path: __filename })
@@ -35,20 +40,28 @@ const signAccessToken = (payloadData) => {
 const signRefreshToken = (payloadData) => {
     return new Promise(async (resolve, reject) => {
         try {
-            console.log("payload = ", payloadData);
             const jwtRefreshToken = JWT.sign(
                 {
                     userId: payloadData.userId,
+                    firstName: payloadData.firstName,
+                    lastName: payloadData.lastName,
                     email: payloadData.email,
+                    userType: payloadData.type
                 },
                 process.env.JWT_REFRESH_TOKEN_SECRET_KEY
             );
+
             console.log(jwtRefreshToken);
+
             const expirationTimeInSeconds = 7 * 24 * 60 * 60;
+
             const refreshTokenKey = `refresh_token:${payloadData.userId}`;
+
             await redisClient.SET(refreshTokenKey, jwtRefreshToken, {
                 EX: expirationTimeInSeconds,
-            })
+            });
+
+            console.log()
 
             resolve(jwtRefreshToken);
         } catch (error) {
@@ -74,28 +87,17 @@ const verifyAccessToken = async (req, res, next) => {
             throw httpErrors[401]('Invalid jwtAccessToken format.');
         }
 
-        console.log("access token = ", accessToken);
-
         const payloadData = JWT.verify(accessToken, process.env.JWT_ACCESS_TOKEN_SECRET_KEY);
 
         const accessTokenKey = `access_token:${payloadData.userId}`;
-        console.log("payload data = ", payloadData);
-        console.log("access token key = ", accessTokenKey);
 
         const cachedAccessToken = await redisClient.GET(accessTokenKey);
-
-        console.log("cached access token = ", cachedAccessToken);
 
         if (accessToken != cachedAccessToken) {
             throw httpErrors[401](notAuthorized);
         }
-        const userDetails = await ClientPersonalInfoModel.findOne({
-            where: {
-                id: payloadData.userId
-            }
-        })
 
-        req.user = userDetails;
+        req.payloadData = payloadData;
 
         next();
 
@@ -131,13 +133,8 @@ const verifyRefreshToken = async (req, res, next) => {
         if (refreshToken !== cachedRefreshToken) {
             throw httpErrors[401](notAuthorized);
         }
-        const userDetails = await UserPersonalInfoModel.findOne({
-            where: {
-                id: payloadData.userId
-            }
-        })
 
-        req.user = userDetails;
+        req.payloadData = payloadData;
 
         next();
 

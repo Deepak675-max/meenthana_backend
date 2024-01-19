@@ -137,12 +137,18 @@ const loginMerchant = async (req, res, next) => {
 
         const jwtAccessToken = await jwtModule.signAccessToken({
             userId: merchant.id,
-            email: merchant.email
+            firstName: merchant.firstName,
+            lastName: merchant.lastName,
+            email: merchant.email,
+            type: "MERCHANT"
         });
 
         const jwtRefreshToken = await jwtModule.signRefreshToken({
             userId: merchant.id,
-            email: merchant.email
+            firstName: merchant.firstName,
+            lastName: merchant.lastName,
+            email: merchant.email,
+            type: "MERCHANT"
         });
 
         if (res.headersSent === false) {
@@ -151,8 +157,9 @@ const loginMerchant = async (req, res, next) => {
                 data: {
                     merchant: {
                         id: merchant.id,
-                        firstName: merchant.userName,
-                        lastName: merchant.email
+                        firstName: merchant.firstName,
+                        lastName: merchant.lastName,
+                        email: merchant.email
                     },
                     accessToken: jwtAccessToken,
                     refreshToken: jwtRefreshToken,
@@ -188,12 +195,18 @@ const loginClient = async (req, res, next) => {
 
         const jwtAccessToken = await jwtModule.signAccessToken({
             userId: client.id,
-            email: client.email
+            firstName: client.firstName,
+            lastName: client.lastName,
+            email: client.email,
+            type: "CLIENT"
         });
 
         const jwtRefreshToken = await jwtModule.signRefreshToken({
             userId: client.id,
-            email: client.email
+            firstName: client.firstName,
+            lastName: client.lastName,
+            email: client.email,
+            type: "CLIENT"
         });
 
         if (res.headersSent === false) {
@@ -223,10 +236,10 @@ const loginClient = async (req, res, next) => {
 
 const refreshUser = async (req, res, next) => {
     try {
-        const user = req.user;
-        console.log(user);
+        const user = req.payloadData;
+
         const jwtAccessToken = await jwtModule.signAccessToken({
-            userId: user.id,
+            userId: user.userId,
             email: user.email
         });
 
@@ -250,9 +263,8 @@ const refreshUser = async (req, res, next) => {
 const getUserFromToken = async (req, res, next) => {
     try {
         const userDetails = {
-            userId: req.user.id,
-            userName: req.user.userName,
-            email: req.user.email,
+            userId: req.payloadData.userId,
+            email: req.payloadData.email,
         };
         if (res.headersSent === false) {
             res.status(200).send({
@@ -273,7 +285,7 @@ const getUserFromToken = async (req, res, next) => {
 const logoutUser = async (req, res, next) => {
     try {
         // Check if Payload contains appAgentId
-        if (!req.user.id) {
+        if (!req.payloadData.userId) {
             throw httpErrors.UnprocessableEntity(
                 `JWT Refresh Token error : Missing Payload Data`
             );
@@ -281,7 +293,7 @@ const logoutUser = async (req, res, next) => {
         // Delete Refresh Token and Access Token from Redis DB
         await jwtModule
             .removeToken({
-                userId: req.user.id,
+                userId: req.payloadData.userId,
             })
             .catch((error) => {
                 throw httpErrors.InternalServerError(

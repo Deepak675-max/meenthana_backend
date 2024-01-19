@@ -6,9 +6,11 @@ const authMiddleware = require('../../middlewares/auth.middleware');
 
 const permissionController = require('../../controllers/permission/permission.controller');
 
-permissionRouter.post('/', authMiddleware.verifyAccessToken, permissionController.createPermission);
-// permissionRouter.get('/access-group', authMiddleware.verifyAccessToken, accessGroupController.getAccessGroups);
-// permissionRouter.put('/access-group', authMiddleware.verifyAccessToken, accessGroupController.updateAccessGroup);
+permissionRouter.post('/create-permission', authMiddleware.verifyAccessToken, permissionController.createPermission);
+permissionRouter.post('/get-permissions', authMiddleware.verifyAccessToken, permissionController.getPermissions);
+permissionRouter.put('/update-permission', authMiddleware.verifyAccessToken, permissionController.updatePermission);
+permissionRouter.delete('/delete-permission', authMiddleware.verifyAccessToken, permissionController.deletePermissions);
+
 // permissionRouter.delete('/access-group/:id', authMiddleware.verifyAccessToken, accessGroupController.deleteAccessGroup);
 
 module.exports = permissionRouter;

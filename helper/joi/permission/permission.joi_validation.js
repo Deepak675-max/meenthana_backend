@@ -6,20 +6,31 @@ const createPermissionSchema = joi.object({
 });
 
 const getPermissionsSchema = joi.object({
-    permissionId: joi.number().allow(null).default(null),
-    accessGroupId: joi.number().allow(null).default(null),
-    appRouteId: joi.number().allow(null).default(null),
+    permissionId: joi.number().optional().default(null),
+    accessGroupId: joi.number().optional().default(null),
+    appRouteId: joi.number().optional().default(null),
+    metaData: joi.object({
+        orderBy: joi.string().trim().optional().default(null),
+        orderDirection: joi.string().trim().optional().default(null),
+        page: joi.number().optional().default(null),
+        pageSize: joi.number().optional().default(null),
+    }).optional().default(null)
 });
 
 const updatePermissionSchema = joi.object({
     permissionId: joi.number().required(),
-    accessGroupId: joi.string().trim().allow(null).default(null),
-    appRoutesIds: joi.array().items(joi.number().required()).min(0).allow(null).default([])
+    accessGroupId: joi.number().optional().default(null),
+    appRouteId: joi.number().optional().default(null)
+});
+
+const deletePermissionSchema = joi.object({
+    permissionIds: joi.array().items(joi.number().required()).min(1).required()
 });
 
 module.exports = {
     createPermissionSchema,
     getPermissionsSchema,
-    updatePermissionSchema
+    updatePermissionSchema,
+    deletePermissionSchema
 }
 

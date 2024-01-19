@@ -2,8 +2,6 @@ const sequelize = require("../../helper/common/init_postgres")
 
 const DataTypes = require("sequelize");
 
-const ForgotPasswordRequests = require('../forgetPasswordRequests.model');
-
 const MerchantPersonalInfoModel = sequelize.define('MerchantPersonalInfo', {
     // Model attributes are defined here
     firstName: {
@@ -34,11 +32,7 @@ const MerchantPersonalInfoModel = sequelize.define('MerchantPersonalInfo', {
     timestamps: true
 });
 
-MerchantPersonalInfoModel.hasMany(ForgotPasswordRequests, { foreignKey: 'userId' });
-ForgotPasswordRequests.belongsTo(MerchantPersonalInfoModel, { foreignKey: 'userId' });
-
 MerchantPersonalInfoModel.sync().catch(error => {
-
     console.log(error);
 })
 

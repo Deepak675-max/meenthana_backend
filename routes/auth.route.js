@@ -6,12 +6,6 @@ const authMiddleware = require('../middlewares/auth.middleware');
 
 const authController = require('../controllers/auth/auth.controller');
 
-/**
- * @openapi
- * register-merchant
- * 
- */
-
 authRouter.post('/register-merchant', authController.registerMerchant);
 authRouter.post('/login-merchant', authController.loginClient);
 authRouter.post('/register-client', authController.registerClient);
