@@ -1,5 +1,3 @@
-const MerchantPersonalInfoModel = require('../models/merchant/personal_info.model');
-const ClientPersonalInfoModel = require('../models/client/personal_info.model');
 const httpErrors = require('http-errors');
 const JWT = require('jsonwebtoken');
 const redisClient = require('../helper/common/init_redis');
@@ -98,6 +96,8 @@ const verifyAccessToken = async (req, res, next) => {
         }
 
         req.payloadData = payloadData;
+
+        console.log(req.payloadData);
 
         next();
 

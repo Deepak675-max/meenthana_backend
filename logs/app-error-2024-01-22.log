@@ -1,0 +1,478 @@
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-22 09:19:59'
+}
+{
+  status: '401',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'invalid credentials.',
+  timestamp: '2024-01-22 09:20:08'
+}
+{
+  status: undefined,
+  path: '\\controllers\\merchant\\account.controller.js',
+  level: 'error',
+  message: 'column MerchantPersonalInfo.merchantId does not exist',
+  timestamp: '2024-01-22 09:25:02'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type integer: "{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 458,
+    severity: 'ERROR',
+    code: '22P02',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'numutils.c',
+    line: '620',
+    routine: 'pg_strtoint32_safe',
+    sql: `ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" SET DEFAULT '{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}';ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;`,
+    parameters: undefined
+  },
+  original: error: invalid input syntax for type integer: "{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 458,
+    severity: 'ERROR',
+    code: '22P02',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'numutils.c',
+    line: '620',
+    routine: 'pg_strtoint32_safe',
+    sql: `ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" SET DEFAULT '{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}';ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;`,
+    parameters: undefined
+  },
+  sql: `ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" SET DEFAULT '{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}';ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;`,
+  parameters: {},
+  level: 'error',
+  timestamp: '2024-01-22 09:54:59'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type integer: "{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 458,
+    severity: 'ERROR',
+    code: '22P02',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'numutils.c',
+    line: '620',
+    routine: 'pg_strtoint32_safe',
+    sql: `ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" SET DEFAULT '{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}';ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;`,
+    parameters: undefined
+  },
+  original: error: invalid input syntax for type integer: "{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}"
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 458,
+    severity: 'ERROR',
+    code: '22P02',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'numutils.c',
+    line: '620',
+    routine: 'pg_strtoint32_safe',
+    sql: `ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" SET DEFAULT '{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}';ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;`,
+    parameters: undefined
+  },
+  sql: `ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" SET DEFAULT '{"monday":{"startTime":"09:00","endTime":"18:00"},"tuesday":{"startTime":"09:00","endTime":"18:00"},"wednesday":{"startTime":"09:00","endTime":"18:00"},"thursday":{"startTime":"09:00","endTime":"18:00"},"friday":{"startTime":"09:00","endTime":"18:00"},"saturday":{"startTime":"09:00","endTime":"18:00"},"sunday":{"startTime":"09:00","endTime":"18:00"}}';ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;`,
+  parameters: {},
+  level: 'error',
+  timestamp: '2024-01-22 09:58:12'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: column "openingHours" cannot be cast automatically to type json
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 191,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "openingHours"::json".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP DEFAULT;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;',
+    parameters: undefined
+  },
+  original: error: column "openingHours" cannot be cast automatically to type json
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 191,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "openingHours"::json".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP DEFAULT;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP DEFAULT;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;',
+  parameters: {},
+  level: 'error',
+  timestamp: '2024-01-22 09:59:48'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: column "openingHours" cannot be cast automatically to type json
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 191,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "openingHours"::json".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP DEFAULT;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;',
+    parameters: undefined
+  },
+  original: error: column "openingHours" cannot be cast automatically to type json
+      at Parser.parseErrorMessage (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\deepa\OneDrive\Desktop\maanthena_website\maanthena_website_backend\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:376:12)
+      at readableAddChunk (node:internal/streams/readable:349:9)
+      at Readable.push (node:internal/streams/readable:286:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+    length: 191,
+    severity: 'ERROR',
+    code: '42804',
+    detail: undefined,
+    hint: 'You might need to specify "USING "openingHours"::json".',
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'tablecmds.c',
+    line: '12336',
+    routine: 'ATPrepAlterColumnType',
+    sql: 'ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP DEFAULT;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;',
+    parameters: undefined
+  },
+  sql: 'ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP NOT NULL;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" DROP DEFAULT;ALTER TABLE "MerchantBusinessInfos" ALTER COLUMN "openingHours" TYPE JSON;',
+  parameters: {},
+  level: 'error',
+  timestamp: '2024-01-22 09:59:59'
+}
+{
+  status: '422',
+  path: '\\controllers\\merchant\\account.controller.js',
+  level: 'error',
+  message: '"openingHours" must be of type object',
+  timestamp: '2024-01-22 10:06:26'
+}
+{
+  status: '404',
+  path: '\\controllers\\merchant\\account.controller.js',
+  level: 'error',
+  message: 'Merchant business details with merchatId: 1 does not exist',
+  timestamp: '2024-01-22 10:07:45'
+}
+{
+  status: '422',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: '"dateOfCreation" is not allowed',
+  timestamp: '2024-01-22 10:09:22'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'relation "MerchantPersonalInfos" does not exist',
+  timestamp: '2024-01-22 10:09:40'
+}
+{
+  status: '404',
+  path: '\\controllers\\merchant\\account.controller.js',
+  level: 'error',
+  message: 'Merchant with id: 2 does not exist',
+  timestamp: '2024-01-22 10:48:34'
+}
+{
+  status: '422',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: '"thumbnailPhotoId" is required',
+  timestamp: '2024-01-22 16:52:33'
+}
+{
+  status: '422',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: '"dimensions" must be of type object',
+  timestamp: '2024-01-22 16:54:40'
+}
+{
+  status: '422',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: '"label" is required',
+  timestamp: '2024-01-22 16:56:07'
+}
+{
+  status: '422',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: '"label" is required',
+  timestamp: '2024-01-22 16:56:36'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'this.build(...).save is not a function',
+  timestamp: '2024-01-22 16:56:49'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'notNull Violation: Product.lable cannot be null',
+  timestamp: '2024-01-22 16:57:34'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'newProduct.createFiles is not a function',
+  timestamp: '2024-01-22 16:58:30'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'invalid input syntax for type integer: "[object Object]"',
+  timestamp: '2024-01-22 17:05:06'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'newProduct.createFiles is not a function',
+  timestamp: '2024-01-22 17:05:46'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'newProduct.createFiles is not a function',
+  timestamp: '2024-01-22 17:12:24'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'invalid input syntax for type integer: "[object Object]"',
+  timestamp: '2024-01-22 17:14:02'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'notNull Violation: File.fieldname cannot be null,\n' +
+    'notNull Violation: File.originalname cannot be null,\n' +
+    'notNull Violation: File.encoding cannot be null,\n' +
+    'notNull Violation: File.mimetype cannot be null,\n' +
+    'notNull Violation: File.destination cannot be null,\n' +
+    'notNull Violation: File.filename cannot be null,\n' +
+    'notNull Violation: File.path cannot be null,\n' +
+    'notNull Violation: File.size cannot be null',
+  timestamp: '2024-01-22 17:37:31'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'this.build(...).save is not a function',
+  timestamp: '2024-01-22 17:38:38'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-22 19:54:00'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-22 19:54:00'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-22 19:54:45'
+}
+{
+  status: '500',
+  path: '\\middlewares\\auth.middleware.js',
+  level: 'error',
+  message: 'Request not Authorized',
+  timestamp: '2024-01-22 19:54:45'
+}
+{
+  status: '401',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'invalid credentials',
+  timestamp: '2024-01-22 19:55:19'
+}
+{
+  status: '401',
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'invalid credentials',
+  timestamp: '2024-01-22 19:58:47'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'data and hash arguments required',
+  timestamp: '2024-01-22 19:59:54'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'data and hash arguments required',
+  timestamp: '2024-01-22 20:00:27'
+}

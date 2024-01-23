@@ -2,12 +2,12 @@ const express = require("express");
 
 const authRouter = express.Router();
 
-const authMiddleware = require('../middlewares/auth.middleware');
+const authMiddleware = require('../../middlewares/auth.middleware');
 
-const authController = require('../controllers/auth/auth.controller');
+const authController = require('../../controllers/auth/auth.controller');
 
 authRouter.post('/register-merchant', authController.registerMerchant);
-authRouter.post('/login-merchant', authController.loginClient);
+authRouter.post('/login-merchant', authController.loginMerchant);
 authRouter.post('/register-client', authController.registerClient);
 authRouter.post('/login-client', authController.loginClient);
 authRouter.get('/get-user', authMiddleware.verifyAccessToken, authController.getUserFromToken);

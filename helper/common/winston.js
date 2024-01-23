@@ -38,7 +38,7 @@ const logger = winston.createLogger({
             datePattern: 'YYYY-MM-DD',
             zippedArchive: true,
             maxSize: '20m',
-            maxFiles: '14d',
+            maxFiles: '1d',
             format: combine(infoFilter(), timestamp({ format: 'YYYY-MM-DD HH:mm:ss', tz: 'Asia/Kolkata' }), addPathAndErrorStatus(), json(), prettyPrint())
         }),
         new DailyRotateFile({
@@ -48,7 +48,7 @@ const logger = winston.createLogger({
             datePattern: 'YYYY-MM-DD',
             zippedArchive: true,
             maxSize: '20m',
-            maxFiles: '14d',
+            maxFiles: '1d',
             format: combine(errorFilter(), timestamp({ format: 'YYYY-MM-DD HH:mm:ss', tz: 'Asia/Kolkata' }), addPathAndErrorStatus(), json(), prettyPrint())
         }),
     ],

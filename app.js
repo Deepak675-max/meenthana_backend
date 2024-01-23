@@ -5,8 +5,8 @@ const cors = require("cors");
 const path = require("path");
 const maanthenaBackendApp = express();
 const http = require('http');
-const listEndPoints = require("express-list-endpoints");
 const server = http.createServer(maanthenaBackendApp);
+const listEndPoints = require("express-list-endpoints");
 maanthenaBackendApp.use(cors({
     origin: "*"
 }));
@@ -58,6 +58,8 @@ const MerchantPersonalInfoModel = require("./models/merchant/personal_info.model
 const MerchantBusinessInfoModel = require("./models/merchant/business_info.model");
 const ForgotPasswordRequests = require("./models/forgetPasswordRequests.model");
 const PermissionModel = require("./models/permision/permission.model");
+const FileModel = require("./models/file/file.model");
+const ProductModel = require("./models/product/product.model");
 
 //model associations.
 //many-to-many association between AppRoutesModel and AccessGroupModel. 
@@ -85,6 +87,21 @@ MerchantBusinessInfoModel.belongsTo(MerchantPersonalInfoModel, { foreignKey: 'me
 MerchantPersonalInfoModel.hasMany(ForgotPasswordRequests, { foreignKey: 'userId' });
 ForgotPasswordRequests.belongsTo(MerchantPersonalInfoModel, { foreignKey: 'userId' });
 
+//one-to-one association between merchant, mechantBusiness and fileModel.
+FileModel.hasOne(MerchantPersonalInfoModel, { foreignKey: "profilePictureId" });
+MerchantPersonalInfoModel.belongsTo(FileModel, { foreignKey: "profilePictureId" });
+FileModel.hasOne(MerchantBusinessInfoModel, { foreignKey: "logoId" });
+MerchantBusinessInfoModel.belongsTo(FileModel, { foreignKey: "logoId" });
+
+//one-to-many associtation between product and file.
+ProductModel.hasMany(FileModel, { foreignKey: "productId", constraints: false });
+FileModel.belongsTo(ProductModel, { foreignKey: "productId", constraints: false });
+
+//one-to-many associtation between merchant and product.
+MerchantPersonalInfoModel.hasMany(ProductModel, { foreignKey: 'merchantId' });
+ProductModel.belongsTo(MerchantPersonalInfoModel, { foreignKey: 'merchantId' });
+
+
 sequelize.sync({ alter: true })
     .then(async () => {
         await addRoutesIntoDatabase(routes);
@@ -95,19 +112,20 @@ sequelize.sync({ alter: true })
         process.exit(0);
     })
 
+
+// if (process.env.ENVIRONMENT === 'production') {
+//     exports.handler = serverless(maanthenaBackendApp);
+// } else {
+
+// }
+
 server.listen(port, () => {
-    console.log(`server is listening on the port of ${port}`)
-    logger.info(`server is listening on the port of ${port}`);
+    console.log("Server is running on the port " + port)
 })
 
-process.on('SIGINT', () => {
-    // Perform cleanup operations here
-    console.log('Received SIGINT signal. application terminated successfully.');
-    logger.info('Received SIGINT signal. application terminated successfully.');
-    // Exit the application
-    process.exit(0);
-});
 
+
+// module.exports = maanthenaBackendApp
 
 
 

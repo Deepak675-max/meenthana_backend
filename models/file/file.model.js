@@ -1,58 +1,38 @@
 const sequelize = require("../../helper/common/init_postgres")
 const { DataTypes } = require('sequelize');
 
-const ProductModel = sequelize.define('Product', {
-    productName: {
+const FileModel = sequelize.define('File', {
+    fieldname: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    reference: {
+    originalname: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    brand: {
+    encoding: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    resume: {
+    mimetype: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    description: {
+    destination: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    salesPriceIncludingTax: {
+    filename: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    path: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    size: {
         type: DataTypes.INTEGER,
         allowNull: false,
-    },
-    promotion: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    quantity: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    category: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    dimensions: {
-        type: DataTypes.JSON,
-        allowNull: false
-    },
-    weight: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    label: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    variants: {
-        type: DataTypes.JSON,
-        allowNull: false
     },
     isDeleted: {
         type: DataTypes.BOOLEAN,
@@ -62,8 +42,8 @@ const ProductModel = sequelize.define('Product', {
     timestamps: true
 });
 
-ProductModel.sync().catch(error => {
+FileModel.sync().catch(error => {
     console.log(error);
 })
 
-module.exports = ProductModel;
+module.exports = FileModel;

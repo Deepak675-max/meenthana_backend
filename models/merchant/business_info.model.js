@@ -8,16 +8,12 @@ const MerchantBusinessInfoModel = sequelize.define('MerchantBusinessInfo', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    businessAddress: {
+    businessEmailAddress: {
         type: DataTypes.STRING,
         allowNull: false
     },
     vatNumber: {
         type: DataTypes.STRING,
-        allowNull: false
-    },
-    dateOfCreation: {
-        type: DataTypes.DATE,
         allowNull: false
     },
     fieldOfActivity: {
@@ -31,6 +27,27 @@ const MerchantBusinessInfoModel = sequelize.define('MerchantBusinessInfo', {
     businessDescription: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    labels: {
+        type: DataTypes.ARRAY(DataTypes.STRING)
+    },
+    dateOfCreation: {
+        type: DataTypes.DATE,
+    },
+    workWithStorageWareHouse: {
+        type: DataTypes.BOOLEAN,
+    },
+    deliveredAbroad: {
+        type: DataTypes.BOOLEAN,
+    },
+    isfranchise: {
+        type: DataTypes.BOOLEAN,
+    },
+    annualTurnOver: {
+        type: DataTypes.STRING,
+    },
+    openingHours: {
+        type: DataTypes.JSON,
     },
     isDeleted: {
         type: DataTypes.BOOLEAN,

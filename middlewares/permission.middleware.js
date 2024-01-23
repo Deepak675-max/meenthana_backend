@@ -35,21 +35,30 @@ const validatePermission = async (req, res, next) => {
             include: [
                 {
                     model: AppRoutesModel,
-                    attribute: ["path", "method"]
+                    attribute: ["path", "method"],
+                    through: {
+                        where: {
+                            isDeleted: false
+                        },
+                        attribute: []
+                    }
                 }
             ],
-            through: { attribute: [] }
         });
 
         const permittedRoutes = accessGroup.AppRoutes;
+
         const requiredRoutes = await Promise.all(
             permittedRoutes.filter(route => {
                 if (route.path === req.originalUrl && route.method === req.method) return route;
             })
         )
+
         if (requiredRoutes.length <= 0) throw httpErrors.Unauthorized("Permission Denied.");
+
         next();
     } catch (error) {
+        console.log(error);
         next(error);
     }
 }

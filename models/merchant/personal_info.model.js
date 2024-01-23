@@ -20,6 +20,9 @@ const MerchantPersonalInfoModel = sequelize.define('MerchantPersonalInfo', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    password: {
+        type: DataTypes.STRING
+    },
     termAndCondition: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
