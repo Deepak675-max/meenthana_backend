@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 const path = require('path');
 const fs = require('fs');
 const jwtModule = require('../../middlewares/auth.middleware')
-const joiUser = require('../../helper/joi/auth.joi_validation');
+const joiUser = require('../../helper/joi/auth/auth.joi_validation');
 const { sendForgotPasswordEmail } = require('../../helper/sevice/nodemailer.sevice');
 const ForgotPasswordRequests = require('../../models/forgetPasswordRequests.model');
 const sequelize = require("../../helper/common/init_postgres");
@@ -19,6 +19,8 @@ const registerMerchant = async (req, res, next) => {
     const transaction = await sequelize.transaction();
     try {
         const merchantDetails = await joiUser.merchantRegistrationDetailsSchema.validateAsync(req.body);
+
+        console.log(merchantDetails);
 
         const doesMerchantExist = await MerchantPersonalInfoModel.findOne({
             where: {
@@ -45,7 +47,7 @@ const registerMerchant = async (req, res, next) => {
         const newMerchantBusiness = await MerchantBusinessInfoModel.create({
             merchantId: merchant.id,
             businessName: merchantDetails.businessName,
-            businessAddress: merchantDetails.businessAddress,
+            businessEmailAddress: merchantDetails.businessEmailAddress,
             dateOfCreation: merchantDetails.dateOfCreation,
             vatNumber: merchantDetails.vatNumber,
             fieldOfActivity: merchantDetails.fieldOfActivity,
@@ -60,7 +62,15 @@ const registerMerchant = async (req, res, next) => {
                 error: false,
                 data: {
                     merchantPersonalDetails: merchant,
-                    merchantBusinessDetails: newMerchantBusiness,
+                    merchantBusinessDetails: {
+                        businessName: newMerchantBusiness.businessName,
+                        businessEmailAddress: newMerchantBusiness.businessEmailAddress,
+                        dateOfCreation: newMerchantBusiness.dateOfCreation,
+                        vatNumber: newMerchantBusiness.vatNumber,
+                        fieldOfActivity: newMerchantBusiness.fieldOfActivity,
+                        siretNumber: newMerchantBusiness.siretNumber,
+                        businessDescription: newMerchantBusiness.businessDescription
+                    },
                     message: "Merchant SignUp successfully",
                 },
             });
@@ -126,11 +136,16 @@ const loginMerchant = async (req, res, next) => {
                 email: userDetails.email,
                 isDeleted: false
             }
-        })
+        });
+
+        console.log(merchant);
+
         if (!merchant)
             throw httpErrors.Unauthorized('invalid credentials');
 
         const isPasswordMatch = await bcrypt.compare(userDetails.password, merchant.password);
+
+        console.log(isPasswordMatch);
 
         if (!isPasswordMatch)
             throw httpErrors.Unauthorized('invalid credentials.');
@@ -264,6 +279,8 @@ const getUserFromToken = async (req, res, next) => {
     try {
         const userDetails = {
             userId: req.payloadData.userId,
+            firstName: req.payloadData.firstName,
+            lastName: req.payloadData.lastName,
             email: req.payloadData.email,
         };
         if (res.headersSent === false) {
