@@ -9,6 +9,7 @@ const fileSchema = joi.object({
     destination: joi.string().required(),
     filename: joi.string().required(),
     path: joi.string().required(),
+    isDeleted: joi.boolean().optional().default(false)
 });
 
 module.exports = {

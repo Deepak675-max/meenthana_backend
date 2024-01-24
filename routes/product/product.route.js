@@ -21,4 +21,18 @@ productRouter.post('/get-products',
     productController.getProducts
 );
 
+productRouter.put('/update-product',
+    authMiddleware.verifyAccessToken,
+    upload.fields([
+        { name: "productImages", maxCount: 5 },
+        { name: "thumbnailImage", maxCount: 1 }
+    ]),
+    productController.updateProduct
+);
+
+productRouter.delete('/delete-products',
+    authMiddleware.verifyAccessToken,
+    productController.deleteProducts
+);
+
 module.exports = productRouter;

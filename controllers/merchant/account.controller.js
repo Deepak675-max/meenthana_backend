@@ -14,21 +14,31 @@ const updateMerchantPersionalDetails = async (req, res, next) => {
     try {
         const merchantPersonalDetails = await joiAccount.updatePersionalDetails.validateAsync(req.body);
 
-        const user = await MerchantPersonalInfoModel.findOne({
+        const merchant = await MerchantPersonalInfoModel.findOne({
             where: {
-                id: accountDetails.userId,
+                id: merchantPersonalDetails.userId,
                 isDeleted: false,
             }
         });
 
-        if (!user) throw httpErrors.NotFound(`User with id: ${accountDetails.userId} does not exist`);
-
+        if (!merchant) throw httpErrors.NotFound(`User with id: ${merchantPersonalDetails.userId} does not exist`);
 
         await MerchantPersonalInfoModel.update(merchantPersonalDetails, {
             where: {
                 id: merchantPersonalDetails.userId
             }
-        })
+        }, { transaction });
+
+        await transaction.commit();
+
+        if (res.headersSent === false) {
+            res.status(201).send({
+                error: false,
+                data: {
+                    message: "Merchant personal details updated successfully",
+                },
+            });
+        }
 
     } catch (error) {
         await transaction.rollback();

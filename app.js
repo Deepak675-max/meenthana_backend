@@ -60,6 +60,8 @@ const ForgotPasswordRequests = require("./models/forgetPasswordRequests.model");
 const PermissionModel = require("./models/permision/permission.model");
 const FileModel = require("./models/file/file.model");
 const ProductModel = require("./models/product/product.model");
+const AddressModel = require("./models/address/address.model");
+const OrderModel = require("./models/order/order.model");
 
 //model associations.
 //many-to-many association between AppRoutesModel and AccessGroupModel. 
@@ -101,6 +103,25 @@ FileModel.belongsTo(ProductModel, { foreignKey: "productId", constraints: false 
 MerchantPersonalInfoModel.hasMany(ProductModel, { foreignKey: 'merchantId' });
 ProductModel.belongsTo(MerchantPersonalInfoModel, { foreignKey: 'merchantId' });
 
+//one-to-many association between merchant business model and address model.
+MerchantBusinessInfoModel.hasMany(ProductModel, { foreignKey: 'merchantBusinessId' });
+ProductModel.belongsTo(MerchantBusinessInfoModel, { foreignKey: 'merchantBusinessId' });
+
+//one-to-many association between merchant business model and address model.
+MerchantBusinessInfoModel.hasMany(AddressModel, { foreignKey: "merchantBusinessId" });
+AddressModel.belongsTo(MerchantBusinessInfoModel, { foreignKey: "merchantBusinessId" });
+
+//one-to-many association between merchant business model and address model.
+ClientPersonalInfoModel.hasMany(AddressModel, { foreignKey: "clientId" });
+AddressModel.belongsTo(ClientPersonalInfoModel, { foreignKey: "clientId" });
+
+//one-to-many association between client and order. 
+ClientPersonalInfoModel.hasMany(OrderModel, { foreignKey: 'clientId' });
+OrderModel.belongsTo(ClientPersonalInfoModel, { foreignKey: 'clientId' });
+
+//one-to-many association between product and order.
+ProductModel.hasMany(OrderModel, { foreignKey: 'productId' });
+OrderModel.belongsTo(ProductModel, { foreignKey: 'productId' });
 
 sequelize.sync({ alter: true })
     .then(async () => {
@@ -112,20 +133,10 @@ sequelize.sync({ alter: true })
         process.exit(0);
     })
 
-
-// if (process.env.ENVIRONMENT === 'production') {
-//     exports.handler = serverless(maanthenaBackendApp);
-// } else {
-
-// }
-
 server.listen(port, () => {
     console.log("Server is running on the port " + port)
 })
 
-
-
-// module.exports = maanthenaBackendApp
 
 
 

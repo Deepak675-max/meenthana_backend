@@ -11,9 +11,9 @@ const joiUser = require('../../helper/joi/auth/auth.joi_validation');
 const { sendForgotPasswordEmail } = require('../../helper/sevice/nodemailer.sevice');
 const ForgotPasswordRequests = require('../../models/forgetPasswordRequests.model');
 const sequelize = require("../../helper/common/init_postgres");
+const AccessGroupModel = require("../access_group/access_group.controller");
 
 const { logger } = require("../../helper/common/winston");
-
 
 const registerMerchant = async (req, res, next) => {
     const transaction = await sequelize.transaction();
@@ -34,12 +34,20 @@ const registerMerchant = async (req, res, next) => {
             throw httpErrors.Conflict(`Merchant with email: ${merchantDetails.email} and phone number: ${merchantDetails.phoneNumber} already exist`);
 
 
+        const accesGroup = await AccessGroupModel.findOne({
+            where: {
+                name: "CLIENT",
+                isDeleted: false,
+            }
+        })
+
         const newMerchant = new MerchantPersonalInfoModel({
             firstName: merchantDetails.firstName,
             lastName: merchantDetails.lastName,
             email: merchantDetails.email,
             phoneNumber: merchantDetails.phoneNumber,
-            termAndCondition: merchantDetails.termAndCondition
+            termAndCondition: merchantDetails.termAndCondition,
+            accesGroupId: accesGroup ? accesGroup.id : null
         }, { transaction });
 
         const merchant = await newMerchant.save({ transaction });
@@ -103,7 +111,14 @@ const registerClient = async (req, res, next) => {
 
         clientDetails.password = await bcrypt.hash(clientDetails.password, 10);
 
-        const newClient = new ClientPersonalInfoModel(clientDetails, { transaction });
+        const accesGroup = await AccessGroupModel.findOne({
+            where: {
+                name: "MERCHANT",
+                isDeleted: false,
+            }
+        })
+
+        const newClient = new ClientPersonalInfoModel({ ...clientDetails, accessGroupId: accesGroup ? accesGroup.id : null }, { transaction });
 
         const client = await newClient.save({ transaction });
 

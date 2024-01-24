@@ -1,11 +1,12 @@
 const joi = require('joi');
 
 const updatePersionalDetails = joi.object({
-    firstName: joi.string().trim().allow(null).default(null),
-    lastName: joi.string().trim().allow(null).default(null),
-    email: joi.string().trim().email().allow(null).default(null),
-    phoneNumber: joi.string().length(10).trim().allow(null).default(null),
-    password: joi.string().trim().allow(null).default(null),
+    merchantId: joi.number().integer().required(),
+    firstName: joi.string().trim().optional().default(null),
+    lastName: joi.string().trim().optional().default(null),
+    email: joi.string().trim().email().optional().default(null),
+    phoneNumber: joi.string().length(10).trim().optional().default(null),
+    password: joi.string().trim().optional().default(null),
 });
 
 const getMerchantPersonalDetailsSchema = joi.object({

@@ -1,0 +1,133 @@
+{
+  status: '422',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: '"productImages" is required',
+  timestamp: '2024-01-23 12:42:25'
+}
+{
+  status: '422',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: '"productImages" is not allowed',
+  timestamp: '2024-01-23 12:44:15'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: "Cannot read properties of null (reading '0')",
+  timestamp: '2024-01-23 12:46:14'
+}
+{
+  status: '404',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'Product with id: 1 does not exist',
+  timestamp: '2024-01-23 12:47:06'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'invalid input syntax for type integer: "[object Object]"',
+  timestamp: '2024-01-23 12:50:44'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'product.deleteFiles is not a function',
+  timestamp: '2024-01-23 12:56:07'
+}
+{
+  status: '500',
+  path: '\\helper\\common\\backend_functions.js',
+  level: 'error',
+  message: 'File does not exist',
+  timestamp: '2024-01-23 12:58:51'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'File does not exist',
+  timestamp: '2024-01-23 12:58:51'
+}
+{
+  status: '500',
+  path: '\\helper\\common\\backend_functions.js',
+  level: 'error',
+  message: 'File does not exist',
+  timestamp: '2024-01-23 13:00:03'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'File does not exist',
+  timestamp: '2024-01-23 13:00:03'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'product is not defined',
+  timestamp: '2024-01-23 13:29:25'
+}
+{
+  status: '404',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'Products with ids 6 do not exist',
+  timestamp: '2024-01-23 13:30:45'
+}
+{
+  status: '422',
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: '"search" must be a string',
+  timestamp: '2024-01-23 13:35:07'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'operator does not exist: integer ~~ unknown',
+  timestamp: '2024-01-23 13:35:14'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'operator does not exist: integer ~~ unknown',
+  timestamp: '2024-01-23 13:35:53'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'operator does not exist: integer ~~ unknown',
+  timestamp: '2024-01-23 13:36:05'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'operator does not exist: integer ~~ unknown',
+  timestamp: '2024-01-23 13:38:11'
+}
+{
+  status: undefined,
+  path: '\\controllers\\product\\product.controller.js',
+  level: 'error',
+  message: 'operator does not exist: integer ~~ unknown',
+  timestamp: '2024-01-23 13:39:39'
+}
+{
+  status: undefined,
+  path: '\\controllers\\auth\\auth.controller.js',
+  level: 'error',
+  message: 'AccessGroupModel.findOne is not a function',
+  timestamp: '2024-01-23 19:41:04'
+}
